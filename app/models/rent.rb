@@ -3,4 +3,5 @@ class Rent < ActiveRecord::Base
 
   validates :movie, presence: true
   validates :status, presence: true
+  validates :rent_at, presence: true, date: true
 end

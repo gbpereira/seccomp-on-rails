@@ -27,7 +27,11 @@ RSpec.describe Rent, type: :model do
         expect(rent.errors[:rent_at].any?).to be_truthy
       end
 
-
+      it 'date' do
+        rent.rent_at = 2000
+        rent.valid?
+        expect(rent.errors[:rent_at].any?).to be_truthy
+      end
     end
   end
 end
