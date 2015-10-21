@@ -1,18 +1,18 @@
 default: &default
   adapter: postgresql
-  user: postgres
+  user: guilherme
   password:
   pool: 5
   timeout: 5000
 
 development:
   <<: *default
-  database: seccomp-dev
+  database: seccomp_dev
 
 test:
   <<: *default
-  database: seccomp-test
+  database: seccomp_test
 
 production:
   <<: *default
-  database: seccomp-production
+  database: seccomp_production
