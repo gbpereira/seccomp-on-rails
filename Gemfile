@@ -4,10 +4,8 @@ source 'https://rubygems.org'
 #ruby-gemset=seccomp
 
 gem 'rails', '4.2.3'
-
-# heroku não suporta sqlite3
-gem 'sqlite3'
-# gem 'pg'
+# gem 'sqlite3'
+gem 'pg'
 
 gem 'jquery-rails'
 
@@ -18,6 +16,6 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.0'
 end
 
-# group :production do
-#   gem 'rails_12factor'
-# end
+group :production do
+  gem 'rails_12factor'
+end

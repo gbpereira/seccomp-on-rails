@@ -1,16 +1,18 @@
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
+  user: guilherme
+  password:
   pool: 5
   timeout: 5000
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: seccomp_dev
 
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: seccomp_test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: seccomp_production
