@@ -14,23 +14,3 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
-
-
-# default: &default
-#   adapter: postgresql
-#   user: guilherme
-#   password:
-#   pool: 5
-#   timeout: 5000
-#
-# development:
-#   <<: *default
-#   database: seccomp_dev
-#
-# test:
-#   <<: *default
-#   database: seccomp_test
-#
-# production:
-#   <<: *default
-#   database: seccomp_production
