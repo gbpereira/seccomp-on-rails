@@ -4,7 +4,6 @@ RSpec.describe Movie, type: :model do
   let(:movie) { FactoryGirl.build(:movie) }
 
   it 'valid' do
-    # movie = FactoryGirl.build(:movie)
     expect(movie).to be_valid
   end
 
