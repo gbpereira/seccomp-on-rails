@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :movie do
-    name "MyString"
+    sequence(:n) { |n| "MyString #{n}" }
     description "MyText"
     year 1900
   end
