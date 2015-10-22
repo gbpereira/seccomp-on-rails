@@ -3,6 +3,8 @@
     <th>Nome</th>
     <th>Ano</th>
     <th>Descrição</th>
+    <th></th>
+    <th></th>
   </thead>
   <tbody>
     <% @movies.each do |movie| %>
@@ -10,6 +12,15 @@
         <td><%= movie.name %></td>
         <td><%= movie.year %></td>
         <td><%= movie.description %></td>
+        <td>
+          <%= link_to 'Editar', edit_movie_path(movie.id) %>
+        </td>
+        <td>
+          <%= link_to 'Excluir',
+                      movie_path(movie.id),
+                      data: { confirm: 'Tem certeza?' },
+                      method: :delete %>
+        </td>
       </tr>
     <% end %>
   </tbody>
